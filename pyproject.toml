@@ -1,0 +1,26 @@
+[project]
+name = "azio"
+version = "0.1"
+description = "null"
+readme = "README.md"
+authors = [{name = "null"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "click"
+]
+
+[project.urls]
+Homepage = "https://github.com/akmazian/azio"
+Changelog = "https://github.com/akmazian/azio/releases"
+Issues = "https://github.com/akmazian/azio/issues"
+CI = "https://github.com/akmazian/azio/actions"
+
+[project.entry-points.console_scripts]
+azio = "azio.cli:cli"
+
+[project.optional-dependencies]
+test = ["pytest"]
