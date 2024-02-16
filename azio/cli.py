@@ -1,21 +1,18 @@
 import click
+import subprocess
+import sys
 
 
 @click.group()
 @click.version_option()
 def cli():
-    "null"
+    "Hey there! Welcome to AZio, the promptful wrapper for useful biopackages."
 
 
-@cli.command(name="command")
-@click.argument(
-    "example"
-)
-@click.option(
-    "-o",
-    "--option",
-    help="An example option",
-)
-def first_command(example, option):
-    "Command description goes here"
-    click.echo("Here is some output")
+from .alignment.kallisto import kallisto
+
+cli.add_command(kallisto)
+
+from .util.install import install
+
+cli.add_command(install)
