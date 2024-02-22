@@ -8,7 +8,7 @@ from ..helper import useSystem
 
 @click.group()
 def kallisto():
-    "This is the wrapper for kallisto, the ultimate pseudoalignment tool we all love! It is developed and maintained by the Patcher Lab at CalTech."
+    "This is the wrapper for kallisto, the ultimate pseudoalignment tool we all love! It is developed and maintained by the Pachter Lab at CalTech."
 
     try:
         win_callback = lambda: subprocess.run(
